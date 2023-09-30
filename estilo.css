@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #192622;
+}
+
+img {
+    width: 100%;
+}
+
+.title {
+    width: 250px; /* Ajuste a largura conforme necessário */
+    height: 250px; /* Ajuste a altura conforme necessário */
+    border-radius: 50%; /* Define o raio de 50% para tornar a imagem redonda */
+  }
+  
+.card {
+    width: 15vw;
+    position: relative;
+}
+
+.title {
+    inset: 0;
+    position: absolute;
+}
+
+.inner img {
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card:hover .inner {
+    transform: perspective(900px) translateY(-5%)
+    rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    filter: blur(0.8px);
+}
+
+.title {
+    transform: translate3d(7%, 70%, 0);
+}
+
+.card:hover .title {
+    transform: translate3d(7%, 30%, 0);
+}
+
+.inner, .title {
+    transition: all 0.5s;
+}
